@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+        <div class="col-1">
+        </div>
+        <div class="col-3">
+            <input type="text" placeholder="Título" #tituloTarea />
+        </div>
+        <div class="col-7">
+            <input type="text" placeholder="Descripción" #descripcionTarea/>
+        </div>
+        <div class="col-1">
+            <button (click)="enviarTarea(tituloTarea.value, descripcionTarea.value)" >Agregar</button>
+        </div>
+    </div>
+</div>
