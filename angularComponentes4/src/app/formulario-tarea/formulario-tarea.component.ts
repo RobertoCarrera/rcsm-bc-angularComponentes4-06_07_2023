@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-formulario-tarea',
@@ -11,16 +11,23 @@ export class FormularioTareaComponent {
   descripcion: string = '';
   mostrarTareas: boolean = false;
 
-  @Output() nuevasTareas = new EventEmitter<{titulo: string; descripcion: string}>();
-  tarea = {titulo: '', descripcion: ''};
+  enviarTareas: any = [];
 
-  enviarTarea(newTitulo: string, newDescripcion: string)
+  nuevaTarea()
   {
 
-    this.tarea.titulo = newTitulo;
-    this.tarea.descripcion = newDescripcion;
+    this.enviarTareas.push({
 
-    this.nuevasTareas.emit(this.tarea)
-    this.tarea = {titulo:'', descripcion:''};
+      titulo: this.titulo,
+      descripcion: this.descripcion
+    });
+    console.log("Nueva Tarea realizada");
+  }
+
+  enviarTarea()
+  {
+
+    return this.enviarTareas;
+    console.log("Enviar Tarea realizada");
   }
 }

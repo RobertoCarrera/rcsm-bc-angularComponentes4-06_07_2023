@@ -1,3 +1,4 @@
 <h1 class="m-5 text-center">TO-DO LIST</h1>
-<app-formulario-tarea (enviarTarea)="agregarTarea()"></app-formulario-tarea>
-<app-lista-tareas [info_tareas]="tareas" ></app-lista-tareas>
+
+<app-formulario-tarea [tareasRecibidas]="enviarTareas"></app-formulario-tarea>
+<app-lista-tareas [mostrar_tareas]="tareasRecibidas" ></app-lista-tareas>

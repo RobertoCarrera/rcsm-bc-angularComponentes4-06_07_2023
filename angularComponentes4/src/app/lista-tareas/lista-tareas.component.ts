@@ -7,16 +7,17 @@ import { Component, Input } from '@angular/core';
 })
 export class ListaTareasComponent {
 
-  @Input() info_tareas: any;
+  @Input() mostrar_tareas: any;
 
   constructor()
   {
-
-    this.info_tareas = [];
+    
+    this.mostrar_tareas = [];
   }
-
-  tareaAcabada(){
-
+  
+  finalizarTarea()
+  {
+    
     
   }
 }

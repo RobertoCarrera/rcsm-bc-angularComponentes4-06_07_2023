@@ -3,13 +3,13 @@
         <div class="col-1">
         </div>
         <div class="col-3">
-            <input type="text" placeholder="Título" #tituloTarea />
+            <input type="text" placeholder="Título" ({ngModel}) = "titulo" />
         </div>
         <div class="col-7">
-            <input type="text" placeholder="Descripción" #descripcionTarea/>
+            <input type="text" placeholder="Descripción" ({ngModel})="descripcion"/>
         </div>
         <div class="col-1">
-            <button (click)="enviarTarea(tituloTarea.value, descripcionTarea.value)" >Agregar</button>
+            <button (click)="nuevaTarea()" >Agregar</button>
         </div>
     </div>
 </div>

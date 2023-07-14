@@ -1,7 +1,7 @@
 <div class="container">
-    <div *ngFor="let tarea of info_tareas" class="row">
+    <div *ngFor="let tarea of mostrar_tareas" class="row">
         <div class="col-1">
-            <input type="checkbox" (change)="tareaAcabada()" />
+            <input type="checkbox" (change)="finalizarTarea()" />
         </div>
         <div class="col-3">
             <p> {{tarea.titulo}} </p>
